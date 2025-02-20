@@ -158,6 +158,8 @@ class Human:
     def __init__ (self,name):
         self.name = name
         print("Bir human instance'ı üretildi")
+    def __str__(self):
+        return f"Str fonksiyonundan dönen değer: {self.name}"
         
     def talk ( self , sentence):
         print(f"Human: {sentence}")
@@ -172,8 +174,13 @@ human1 = Human("Furkan")
 # human1.talk()
 human1.talk("Merhaba")
 human1.walk()
+print(human1)
 
 human2 = Human("Mustafa")
 # human2.name = "Cem"
 human2.talk("Selam")
 human2.walk()
+print(human2)
+
+Human("Melike").talk("Merhaba")
+
