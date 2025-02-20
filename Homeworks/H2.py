@@ -139,8 +139,41 @@ def calculateAndReturn(prize,discount):
 yeniFiyat = calculateAndReturn(200,50)
 print(yeniFiyat)
 
-fonk1 = calculateWithParams(100,50)
-fonk2 = calculateAndReturn(300,100)
-print(f"144.satır:{fonk1}")
-print(f"145.satır:{fonk2}")
+# fonk1 = calculateWithParams(100,50)
+# fonk2 = calculateAndReturn(300,100)
+# print(f"144.satır:{fonk1}")
+# print(f"145.satır:{fonk2}")
+ 
+# sınıflar => classlar
+# modules
+# paket yönetimi
 
+# self => this self ismini vermek gerekmiyor istersen a de ama bir parametre vermen gerekiyor
+
+class Human:
+    # def talk(self):
+        # print("Human is talking")
+    name = "Halit"
+    #built-in contructure initialize
+    def __init__ (self,name):
+        self.name = name
+        print("Bir human instance'ı üretildi")
+        
+    def talk ( self , sentence):
+        print(f"Human: {sentence}")
+        name = "Ercan"
+        print(f"{self.name}: {sentence}")
+        print(f"{name}: {sentence}")
+    def walk(self):
+        print(f"{self.name} is walking")
+# instance => örnek
+human1 = Human("Furkan")
+# human1.name = "Enes"
+# human1.talk()
+human1.talk("Merhaba")
+human1.walk()
+
+human2 = Human("Mustafa")
+# human2.name = "Cem"
+human2.talk("Selam")
+human2.walk()
