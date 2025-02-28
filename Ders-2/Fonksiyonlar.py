@@ -39,7 +39,22 @@ print(sum (5,10))
 print(sum(5))
 print(sum())
 
-# ** kwargs -> araştırma ve uygulama
+# ** kwargs 
+def selamla(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Fonksiyona anahtar kelime argümanları gönderelim
+selamla(ad="Ahmet", soyad="Yılmaz", yas=25)
+
+
+def kullanici_bilgisi(isim, **bilgiler):
+    print(f"İsim: {isim}")
+    for key, value in bilgiler.items():
+        print(f"{key}: {value}")
+
+kullanici_bilgisi("Mehmet", yas=30, sehir="İstanbul", meslek="Mühendis")
+
 
 # lamdba fonksiyonları: 
 # tek satırlık fonksiyonları kısaca tanımlama yöntemi
